@@ -1,11 +1,11 @@
 import { Route,Routes } from 'react-router-dom'
 import './App.css'
-import Home from './pages/Home'
-import Wishlist from './pages/Wishlist'
-import Cart from './pages/Cart'
-import View from './pages/View'
-import Pnf from './pages/Pnf'
-
+import Home from './pages/Home';
+import Wishlist from './pages/Wishlist';
+import Cart from './pages/Cart';
+import View from './pages/View';
+import Pnf from './pages/Pnf';
+import Footer from './components/Footer'
 
 function App() {
 
@@ -16,8 +16,9 @@ function App() {
       <Route path='/wishlist' element={<Wishlist/>}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/products/:id/view' element={<View/>}/>
-      <Route path='/pnf' element={<Pnf/>}/>
+      <Route path='/*' element={<Pnf/>}/>
     </Routes>
+    <Footer/>
     </>
   )
 }
